@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=The+Nautigal:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Real Quotes</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content-item">
+            <div class="icon">
+                <i class="fas fa-quote-left"></i>
+            </div>
+            <div id="quotes">
+
+            </div>
+            <div id="author">
+            kingo
+
+            </div>
+            <button id="newQ">New Quotes</button>
+        </div>
+    </div>
+</body>
+<script>
+    const quotes = document.getElementById("quotes");
+    const author = document.getElementById("author");
+    const newQ = document.getElementById("newQ");
+    let realdata = "";
+    const fetchapi = async () => {
+        const api = "https://type.fit/api/quotes";
+        try {
+            let data = await fetch(api);
+            let realdata = await data.json();
+
+            let rnum = Math.floor(Math.random() * 16);
+            quotes.innerText = `${realdata[rnum].text}`;
+            author.innerText= `${realdata[rnum].author}`;
+         
+        }
+        catch {
+
+        }
+    };
+    newQ.addEventListener("click",fetchapi);
+    fetchapi();
+</script>
+
+</html>

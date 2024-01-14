@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=The+Nautigal:wght@400;700&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1764;
+}
+.container {
+    display: flex;
+    width: 49vw;
+    height: 71vh;
+    justify-content: center;
+    color: black;
+    align-items: center;
+    background-color: #12CBC4;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.content-item {
+    display: flex;
+    width: 41vw;
+    height: 54vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.icon {
+    position: relative;
+    top: -7vh;
+    left: -15vw;
+    font-size: 3.5rem;
+    color: #818181;
+}
+#quotes {
+    display: flex;
+    height: 5rem;
+    position: relative;
+    font-weight: 600;
+    top: -3rem;
+    font-size: 3.5rem;
+    font-family:'Trebuchet MS'
+}
+#author {
+    display: flex;
+    position: relative;
+    right: 0;
+    right: -11vw;
+    font-size: 2rem;
+    color: red;
+    top: 3rem;
+    font-family: 'Playfair Display', serif;
+}
+.content-item button {
+    align-items: center;
+    display: flex;
+    position: relative;
+    color: white;
+    background-color: #0652DD;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid white;
+    font-size: 3rem;
+    bottom: -16%;
+    justify-content: center;
+    height: 11vh;
+}
